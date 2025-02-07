@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cyber.foodmanagement.Controller.EditFoodController" style="-fx-padding: 20;">
+    <children>
+        <Label text="Name:" layoutX="20.0" layoutY="20.0"/>
+        <TextField fx:id="nameField" layoutX="100.0" layoutY="20.0" promptText="Enter food name"/>
+
+        <Label text="Description:" layoutX="20.0" layoutY="60.0"/>
+        <TextField fx:id="descriptionField" layoutX="100.0" layoutY="60.0" promptText="Enter food description"/>
+
+        <Label text="Price:" layoutX="20.0" layoutY="100.0"/>
+        <TextField fx:id="priceField" layoutX="100.0" layoutY="100.0" promptText="Enter price"/>
+
+        <Label text="Quantity:" layoutX="20.0" layoutY="140.0"/>
+        <TextField fx:id="quantityField" layoutX="100.0" layoutY="140.0" promptText="Enter quantity"/>
+
+        <Label text="Category:" layoutX="20.0" layoutY="180.0"/>
+        <ComboBox fx:id="categoryComboBox" layoutX="100.0" layoutY="180.0"/>
+
+        <HBox spacing="10" layoutX="100.0" layoutY="220.0">
+            <Button text="Save" onAction="#handleSave"/>
+            <Button text="Cancel" onAction="#handleCancel"/>
+        </HBox>
+    </children>
+</AnchorPane>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cyber.foodmanagement.Controller.AddFoodController" style="-fx-padding: 20;">
+    <children>
+        <Label text="Name:" layoutX="20.0" layoutY="20.0"/>
+        <TextField fx:id="nameInput" layoutX="100.0" layoutY="20.0" promptText="Enter food name"/>
+
+        <Label text="Description:" layoutX="20.0" layoutY="60.0"/>
+        <TextField fx:id="specificationsInput" layoutX="100.0" layoutY="60.0" promptText="Enter food description"/>
+
+        <Label text="Price:" layoutX="20.0" layoutY="100.0"/>
+        <TextField fx:id="priceInput" layoutX="100.0" layoutY="100.0" promptText="Enter price" />
+
+        <Label text="Quantity:" layoutX="20.0" layoutY="140.0"/>
+        <TextField fx:id="quantityInput" layoutX="100.0" layoutY="140.0" promptText="Enter quantity"/>
+
+        <Label text="Image URL:" layoutX="20.0" layoutY="180.0"/>
+        <TextField fx:id="imageUrlInput" layoutX="100.0" layoutY="180.0" promptText="Enter image URL" />
+
+        <Button text="Upload Image" layoutX="320.0" layoutY="180.0" onAction="#handleUploadImage"/>
+
+        <Label text="Category:" layoutX="20.0" layoutY="220.0"/>
+        <ComboBox fx:id="categoryComboBox" layoutX="100.0" layoutY="220.0" promptText="Select category"/>
+
+        <HBox spacing="10" layoutX="100.0" layoutY="270.0">
+            <Button text="Save" onAction="#handleSaveButton" />
+            <Button text="Cancel" onAction="#handleCancelButton" />
+        </HBox>
+    </children>
+</AnchorPane>
