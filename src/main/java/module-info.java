@@ -1,14 +1,11 @@
-module com.example.foodmanagement {
+module com.userffood.fooduser {
     requires javafx.controls;
     requires javafx.fxml;
     requires java.sql;
-    requires java.desktop;
 
 
-    opens com.cyber.foodmanagement to javafx.fxml;
-    exports com.cyber.foodmanagement;
-    exports com.cyber.foodmanagement.Controller;
-    opens com.cyber.foodmanagement.Controller to javafx.fxml;
-    exports com.cyber.foodmanagement.model;
-    opens com.cyber.foodmanagement.model to javafx.fxml;
+    opens com.userfood.fooduser to javafx.fxml;
+    exports com.userfood.fooduser;
+    exports com.userfood.fooduser.Controller;
+    opens com.userfood.fooduser.Controller to javafx.fxml;
 }

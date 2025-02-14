@@ -1,0 +1,83 @@
+
+    <?import javafx.scene.control.Button?>
+    <?import javafx.scene.control.Label?>
+    <?import javafx.scene.control.ScrollPane?>
+    <?import javafx.scene.control.Tab?>
+    <?import javafx.scene.control.TabPane?>
+    <?import javafx.scene.layout.AnchorPane?>
+    <?import javafx.scene.layout.BorderPane?>
+    <?import javafx.scene.layout.ColumnConstraints?>
+    <?import javafx.scene.layout.GridPane?>
+    <?import javafx.scene.layout.RowConstraints?>
+    <?import javafx.scene.layout.VBox?>
+
+    <BorderPane prefHeight="643.0" prefWidth="1282.0"  xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1"
+                fx:controller="com.userfood.fooduser.Controller.UserInterfaceController">
+
+    <!-- Header -->
+    <top>
+        <Label style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-padding: 15px; -fx-text-fill: #333;" text="Menu" BorderPane.alignment="CENTER" />
+    </top>
+
+    <!-- Center (Tabs Menu) -->
+    <center>
+        <TabPane prefHeight="400.0" prefWidth="500.0" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab text="Drink">
+                    <AnchorPane focusTraversable="true" maxHeight="Infinity" maxWidth="Infinity" nodeOrientation="LEFT_TO_RIGHT">
+                        <ScrollPane fitToWidth="true" fitToHeight="true" hbarPolicy="NEVER"
+                                    AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                                    AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <GridPane fx:id="drinksGrid" alignment="CENTER" hgap="20" vgap="20" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
+                                <columnConstraints>
+                                    <ColumnConstraints hgrow="ALWAYS" />
+                                    <ColumnConstraints hgrow="ALWAYS" />
+                                    <ColumnConstraints hgrow="ALWAYS" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                    <RowConstraints vgrow="ALWAYS" />
+                                    <RowConstraints vgrow="ALWAYS" />
+                                    <RowConstraints vgrow="ALWAYS" />
+                                </rowConstraints>
+                            </GridPane>
+                        </ScrollPane>
+                    </AnchorPane>
+                </Tab>
+            <Tab text="Food" >
+
+                    <AnchorPane>
+                        <ScrollPane fitToWidth="true" fitToHeight="true" hbarPolicy="NEVER"
+                                    AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                                    AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <GridPane fx:id="foodGrid" alignment="CENTER" hgap="20" vgap="20" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
+                                <columnConstraints>
+                                    <ColumnConstraints hgrow="ALWAYS" />
+                                    <ColumnConstraints hgrow="ALWAYS" />
+                                    <ColumnConstraints hgrow="ALWAYS" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                    <RowConstraints vgrow="ALWAYS" />
+                                    <RowConstraints vgrow="ALWAYS" />
+                                    <RowConstraints vgrow="ALWAYS" />
+                                </rowConstraints>
+                            </GridPane>
+                        </ScrollPane>
+                    </AnchorPane>
+                </Tab>
+
+
+            </tabs>
+        </TabPane>
+    </center>
+
+    <!-- Giỏ hàng -->
+    <right>
+        <VBox fx:id="checkoutPane" prefHeight="439.0" prefWidth="285.0" spacing="10" style="-fx-padding: 15px; -fx-background-color: white; -fx-border-color: #ccc; -fx-border-width: 1px; -fx-border-radius: 5px;">
+            <Label style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Đơn thanh toán" />
+            <VBox fx:id="cartVBox" maxWidth="Infinity" prefHeight="180.0" /> <!-- Giữ lại VBox -->
+            <Label fx:id="totalLabel" style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #ff5733;" text="Tổng cộng: 0 VND" />
+            <Button fx:id="checkoutButton"  style="-fx-background-color: #ff5733; -fx-text-fill: white; -fx-font-size: 16px; -fx-padding: 10px;" text="💳 Thanh toán" />
+        </VBox>
+    </right>
+
+</BorderPane>
